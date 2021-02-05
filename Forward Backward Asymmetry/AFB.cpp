@@ -1,4 +1,4 @@
-#include "SampleAnalyzer/User/Analyzer/user.h"
+#include "SampleAnalyzer/User/Analyzer/AFB.h"
 #include <cmath>
 #include <iostream>
 #include "SampleAnalyzer/Commons/Service/PDGService.h"
@@ -6,7 +6,7 @@
 using namespace MA5;
 using namespace std;
 
-MAbool user::Initialize(const MA5::Configuration& cfg,
+MAbool AFB::Initialize(const MA5::Configuration& cfg,
                       const std::map<std::string,std::string>& parameters)
 {
   // Initializing PhysicsService for MC
@@ -118,7 +118,7 @@ MAbool user::Initialize(const MA5::Configuration& cfg,
   return true;
 }
 
-MAbool user::Execute(SampleFormat& sample, const EventFormat& event)
+MAbool AFB::Execute(SampleFormat& sample, const EventFormat& event)
 {
   MAfloat32 EvWeight = 1.0;
   if (weighted_events_ && event.mc()!=0) EvWeight *= event.mc()->weight();
@@ -351,7 +351,7 @@ MAbool user::Execute(SampleFormat& sample, const EventFormat& event)
   return true;
 }
 
-void user::Finalize(const SampleFormat& summary, const std::vector<SampleFormat>& files)
+void AFB::Finalize(const SampleFormat& summary, const std::vector<SampleFormat>& files)
 {
 	myfile.close();
 }

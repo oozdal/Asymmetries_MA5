@@ -6,9 +6,9 @@
 using namespace std;
 namespace MA5
 {
-class user : public AnalyzerBase
+class AFB : public AnalyzerBase
 {
-  INIT_ANALYSIS(user,"MadAnalysis5job")
+  INIT_ANALYSIS(AFB,"MadAnalysis5job")
 
  public : 
   virtual MAbool Initialize(const MA5::Configuration& cfg,
