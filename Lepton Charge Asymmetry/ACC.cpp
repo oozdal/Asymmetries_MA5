@@ -13,8 +13,8 @@ MAbool ACC::Initialize(const MA5::Configuration& cfg,
   PHYSICS->mcConfig().AddInvisibleId(14);
   PHYSICS->mcConfig().AddInvisibleId(-12);
   PHYSICS->mcConfig().AddInvisibleId(-14);
-  PHYSICS->mcConfig().AddInvisibleId(9900012);
-  PHYSICS->mcConfig().AddInvisibleId(-9900012);
+//  PHYSICS->mcConfig().AddInvisibleId(9900012);
+//  PHYSICS->mcConfig().AddInvisibleId(-9900012);
 
   // ===== Signal region ===== //
   Manager()->AddRegionSelection("SR_Lepton");
